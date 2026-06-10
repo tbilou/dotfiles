@@ -1,0 +1,14 @@
+# caches
+.config/nvim/lazy-lock.json
+.config/zsh/.zsh_history
+.config/zsh/.zcompdump
+.config/cache
+.config/local
+
+# ssh
+.ssh/known_hosts
+.ssh/config.work
+
+# local overlays
+.zshrc.work
+Brewfile.work

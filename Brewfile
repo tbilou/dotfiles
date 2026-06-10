@@ -1,0 +1,41 @@
+tap "buo/cask-upgrade"
+
+# My stuff
+brew "stow"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"
+brew "zsh-vi-mode"
+brew "powerlevel10k"
+brew "eza"
+brew "bat"
+brew "fzf"
+brew "fd"
+brew "zoxide"
+brew "neovim"
+brew "lazygit"
+brew "httpie"
+brew "jq"
+brew "macos-trash"
+brew "telnet"
+brew "z"
+brew "mas"
+brew "anomalyco/tap/opencode"
+
+cask "stats"
+cask "thaw"
+cask "1password"
+cask "1password-cli"
+cask "wezterm"
+cask "iina"
+cask "firefox"
+cask "keepingyouawake"
+cask "betterdisplay"
+cask "flycut"
+cask "tailscale-app"
+cask "battery"
+cask "nikitabobko/tap/aerospace"
+cask "karabiner-elements"
+
+mas "1Password for Safari", id: 1569813296
+mas "Accelerate for Safari", id: 1459809092
+mas "Bear", id: 1091189122
