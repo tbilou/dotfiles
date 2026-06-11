@@ -20,6 +20,7 @@ brew "telnet"
 brew "z"
 brew "mas"
 brew "anomalyco/tap/opencode"
+brew "lima" 
 
 cask "stats"
 cask "thaw"
