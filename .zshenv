@@ -16,6 +16,10 @@ export SAVEHIST=10000                   # Maximum events in history file
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 export BAT_THEME=tokyonight_night
 
+if [[ -S "$HOME/.1password/agent.sock" || -L "$HOME/.1password/agent.sock" ]]; then
+  export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
+fi
+
 # Man pages
 export MANPAGER='nvim +Man!'
 
@@ -39,4 +43,3 @@ blue="#06BCE4"
 cyan="#2CF9ED"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
-
