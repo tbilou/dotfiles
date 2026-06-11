@@ -9,7 +9,7 @@ mount_path=${mount_path:A}
 
 if [[ ! -f "$instance_dir/lima.yaml" ]]; then
   echo "creating vm"
-  limactl create "$template" --name "$name" --mount-only "${mount_path}:w"
+  limactl create --tty=false --name "$name" --param "HostDevelopmentPath=${mount_path}" "$template"
 fi
 
-limactl start "$name" --mount-only "${mount_path}:w"
+limactl start "$name"

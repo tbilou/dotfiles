@@ -7,8 +7,16 @@ base:
 user:
   shell: /usr/bin/zsh
 
+param:
+  HostDevelopmentPath: "/tmp"
+
 ssh:
   forwardAgent: true
+
+mounts:
+  - location: "{{.Param.HostDevelopmentPath}}"
+    mountPoint: "{{.Home}}/dev"
+    writable: true
 
 provision:
   - mode: system
