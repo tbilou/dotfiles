@@ -2,7 +2,6 @@ minimumLimaVersion: 2.0.0
 
 base:
   - template:_images/ubuntu
-  - template:_default/mounts
 
 user:
   shell: /usr/bin/zsh
