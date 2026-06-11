@@ -1,0 +1,15 @@
+emulate -L zsh
+
+local template=${OPENCODE_LIMA_TEMPLATE:-$HOME/.config/lima/opencode-dev.yaml}
+local name=${OPENCODE_LIMA_NAME:-opencode}
+local mount_path=${1:-$PWD}
+local instance_dir=${LIMA_HOME:-$HOME/.lima}/$name
+
+mount_path=${mount_path:A}
+
+if [[ ! -f "$instance_dir/lima.yaml" ]]; then
+  echo "creating vm"
+  limactl create "$template" --name "$name" --mount-only "${mount_path}:w"
+fi
+
+limactl start "$name" --mount-only "${mount_path}:w"

@@ -1,0 +1,20 @@
+minimumLimaVersion: 2.0.0
+
+base:
+  - template:_images/ubuntu
+  - template:_default/mounts
+
+user:
+  shell: /usr/bin/zsh
+
+ssh:
+  forwardAgent: true
+
+provision:
+  - mode: system
+    file:
+      url: bootstrap-system.sh
+
+  - mode: user
+    file:
+      url: bootstrap-user.sh

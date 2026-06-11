@@ -1,0 +1,5 @@
+dev() {
+  export LIMA_INSTANCE=opencode
+  opencode_vm "$HOME/dev"
+  lima
+}
