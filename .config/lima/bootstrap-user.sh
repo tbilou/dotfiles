@@ -66,9 +66,6 @@ if [ ! -d "$DOTFILES_DIR" ]; then
   git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
 fi
 
-mkdir -p "$HOME/.1password"
-ln -snf /run/host-services/ssh-auth.sock "$HOME/.1password/agent.sock"
-
 rm -f "$HOME/.zshrc"
 
 cd "$DOTFILES_DIR"
