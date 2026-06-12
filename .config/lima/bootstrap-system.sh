@@ -4,12 +4,21 @@ set -euxo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 
+install -d -m 755 /etc/apt/keyrings /etc/apt/sources.list.d
+curl -fsSL \
+  -o /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+  https://cli.github.com/packages/githubcli-archive-keyring.gpg
+chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+cat <<EOF >/etc/apt/sources.list.d/github-cli.list
+deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main
+EOF
+
 apt-get update
 apt-get install -y \
   zsh git curl ca-certificates unzip xz-utils stow \
   build-essential pkg-config jq \
   zsh-syntax-highlighting zsh-autosuggestions \
-  bat fd-find fzf
+  bat fd-find fzf gh zoxide
 
 ln -sf /usr/bin/fdfind /usr/local/bin/fd || true
 ln -sf /usr/bin/batcat /usr/local/bin/bat || true
