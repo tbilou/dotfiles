@@ -44,6 +44,9 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # ---- Zoxide (better cd) ----
 command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
 
+# ---- Mise ----
+command -v mise >/dev/null 2>&1 && eval "$(mise activate zsh)"
+
 # zsh vi mode
 [[ -r /usr/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh ]] && source /usr/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 [[ -r /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh ]] && source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh

@@ -36,6 +36,9 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 
+# ---- Mise ----
+command -v mise >/dev/null 2>&1 && eval "$(mise activate zsh)"
+
 # Brew completions
 eval "$(brew shellenv)"
 
