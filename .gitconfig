@@ -1,0 +1,17 @@
+[includeIf "gitdir/i:~/dev/source.xing.com/"]
+    path = ~/dev/source.xing.com/.gitconfig
+
+[includeIf "gitdir/i:~/dev/github.com/"]
+    path = ~/dev/github.com/.gitconfig
+
+[includeIf "gitdir/i:~/dev/github.com/xing-com/"]
+    path = ~/dev/github.com/xing-com/.gitconfig
+
+[includeIf "gitdir/i:~/dev/github.com/new-work/"]
+    path = ~/dev/github.com/.gitconfig
+
+[includeIf "gitdir/i:~/dev/personal/"]
+    path = ~/dev/personal/.gitconfig
+
+[includeIf "gitdir/i:~/.dotfiles/"]
+    path = ~/dev/github.com/.gitconfig
