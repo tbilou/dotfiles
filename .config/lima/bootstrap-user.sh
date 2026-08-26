@@ -62,6 +62,14 @@ if [ ! -x "$HOME/.opencode/bin/opencode" ]; then
   curl -fsSL https://opencode.ai/install | bash
 fi
 
+if [ ! -x "$HOME/.local/bin/codex" ]; then
+  curl -fsSL https://chatgpt.com/codex/install.sh | sh
+fi
+
+if [ ! -x "$HOME/.local/bin/herdr" ]; then
+  curl -fsSL curl -fsSL https://herdr.dev/install.sh | sh
+fi
+
 if [ ! -d "$DOTFILES_DIR" ]; then
   git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
 fi

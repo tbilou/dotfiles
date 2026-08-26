@@ -21,6 +21,7 @@ brew "z"
 brew "mas"
 brew "anomalyco/tap/opencode"
 brew "lima" 
+brew "herdr" 
 
 cask "stats"
 cask "thaw"
