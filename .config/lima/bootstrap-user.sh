@@ -59,7 +59,7 @@ if [ ! -x "$HOME/.local/bin/mise" ]; then
 fi
 
 if [ ! -x "$HOME/.opencode/bin/opencode" ]; then
-  curl -fsSL https://opencode.ai/install | bash
+  curl -fsSL https://opencode.ai/v2/install | bash
 fi
 
 if [ ! -x "$HOME/.local/bin/codex" ]; then
