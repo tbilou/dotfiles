@@ -16,7 +16,9 @@ export SAVEHIST=10000                   # Maximum events in history file
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
 export BAT_THEME=tokyonight_night
 
-if [[ -S "$HOME/.1password/agent.sock" || -L "$HOME/.1password/agent.sock" ]]; then
+# Only use 1Password SSH agent on macOS (host). On Linux (Lima VM),
+# SSH agent is forwarded through the SSH connection — don't override.
+if [[ "$(uname)" == "Darwin" ]] && [[ -S "$HOME/.1password/agent.sock" ]]; then
   export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 fi
 
