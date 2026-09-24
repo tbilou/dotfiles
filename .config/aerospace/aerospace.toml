@@ -1,6 +1,10 @@
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
+# Config version for compatibility and deprecations
+# See: https://nikitabobko.github.io/AeroSpace/guide#config-version
+config-version = 2
+
 # It's not necessary to copy all keys to your config.
 # If the key is missing in your config, "default-config.toml" will serve as a fallback
 
@@ -229,9 +233,14 @@ alt-shift-l = ['join-with right', 'mode main']
     if.app-id = 'com.apple.mail'
     run = 'move-node-to-workspace 5'
 
+
 [[on-window-detected]]
     if.app-id = 'com.microsoft.teams2'
     run = 'move-node-to-workspace 5' 
+
+[[on-window-detected]]
+    if.app-id = 'com.openai.codex'
+    run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
     if.app-id = 'com.1password.1password'

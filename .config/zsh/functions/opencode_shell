@@ -1,0 +1,5 @@
+emulate -L zsh
+
+local name=${OPENCODE_LIMA_NAME:-opencode}
+
+limactl shell --shell /usr/bin/zsh "$name"
