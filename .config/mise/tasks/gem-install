@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#MISE description="Install a gem using credentials from a 1Password Environment"
+set -euo pipefail
+
+if (($# < 1)); then
+  echo "Usage: mise run gem-install <gem> [gem options...]" >&2
+  exit 2
+fi
+
+environment=3dnyzrmblbkqdofmkoe6rl7s4y
+
+exec op run --environment "$environment" -- bash -c '
+  : "${JFROG_GEM_SOURCE:?Set JFROG_GEM_SOURCE in the selected 1Password Environment}"
+  exec mise exec -- gem install --no-document "$@" --source "$JFROG_GEM_SOURCE"
+' bash "$@"
